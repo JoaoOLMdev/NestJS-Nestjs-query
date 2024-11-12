@@ -56,6 +56,6 @@ $ yarn start:dev
 
 ## 🤝 Contribuídores
 
-<a href="https://github.com/JoaoOLMdev"><img src="https://github.com/JoaoOLMdev" width="45" height="45"></a> &nbsp;
-<a href="https://github.com/amaralTheSage"><img src="https://github.com/amaralTheSage" width="45" height="45"></a> &nbsp;
+<a href="https://github.com/JoaoOLMdev"><img src="https://github.com/JoaoOLMdev.png" width="45" height="45"></a> &nbsp;
+<a href="https://github.com/amaralTheSage"><img src="https://github.com/amaralTheSage.png" width="45" height="45"></a> &nbsp;
 
