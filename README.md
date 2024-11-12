@@ -34,25 +34,13 @@
 
 ## Executando o projeto 
 ### Ajustando o .env
-  Renomeie ``.env.example`` para ``.env`` e configure como desejar.
   
-### Executando a postgres
+### Executando o projeto
 
 ```bash
 $ docker-compose up
 ```
 
-### Instalando as dependências
-  
-```bash
-$ npm install
-```
-
-### Executando a aplicação
-
-```bash
-$ yarn start:dev
-```
 
 ## 🤝 Contribuídores
 
