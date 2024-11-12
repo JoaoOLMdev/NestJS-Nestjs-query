@@ -1,10 +1,40 @@
-version: '3'
 services:
-  postgres:
-    image: 'postgres:9.6.1'
+  nest_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
     ports:
-      - '5432:5432'
+      - "3000:3000" 
     environment:
-      POSTGRES_USER: 'test'
-      POSTGRES_PASSWORD: 'test'
-      POSTGRES_DB: 'test'
+      - TYPEORM_HOST=db_postgres
+      - TYPEORM_PORT=5432        
+      - TYPEORM_USERNAME=test_user      
+      - TYPEORM_PASSWORD=test_password  
+      - TYPEORM_DATABASE=test_db      
+      - API_PORT=3000
+    networks:
+      - docker-network
+    depends_on:
+      - db_postgres
+
+  db_postgres:
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_USER: test_user          
+      POSTGRES_PASSWORD: test_password 
+      POSTGRES_DB: test_db        
+    networks:
+      - docker-network
+    ports:
+      - "8000:8000" 
+    volumes:
+      - api_db_data:/var/lib/postgresql/data
+
+networks:
+  docker-network:
+
+volumes:
+  api_db_data:
